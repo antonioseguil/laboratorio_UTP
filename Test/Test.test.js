@@ -2,6 +2,7 @@ const { Builder, By } = require("selenium-webdriver");
 const assert = require("assert");
 
 describe("Primera pregunta de laboratorio", async function () {
+  
   it("Validaciones título", async function () {
     let driver = await new Builder().forBrowser("firefox").build();
     await driver.get("https://www.techlistic.com/");
@@ -63,25 +64,6 @@ describe("Primera pregunta de laboratorio", async function () {
       assert.fail("No existe el título");
     } finally {
       driver.quit();
-    }
-  });
-});
-
-describe("Segunda pregunta de laboratorio", async function () {
-  it("Creación de usuario", async function () {
-    let driver = await new Builder().forBrowser("firefox").build();
-    await driver.get("http://automationpractice.com/index.php");
-
-    
-    
-    try {
-      await driver.findElement(By.className("login")).click();
-      await driver.findElement(By.id("email_create")).sendKeys("testseguil12343434@gmail.com")
-      await driver.findElement(By.id("SubmitCreate")).click();
-    } catch (error) {
-      assert.fail("Test 2");
-    } finally {
-      //driver.quit();
     }
   });
 });
