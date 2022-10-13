@@ -1,0 +1,15 @@
+{
+  "name": "calidad",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha --no-timeouts"
+  },
+  "author": "Antonio Seguil",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^10.0.0",
+    "selenium-webdriver": "^4.5.0"
+  }
+}
